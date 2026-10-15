@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM SHRI SCHOOL OF EXCELLENCE BECHAR KA BAGH</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0F2C59',
+                            900: '#071952',
+                        },
+                        saffron: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .gradient-hero {
+            background: linear-gradient(135deg, #071952 0%, #0F2C59 50%, #1E3A8A 100%);
+        }
+        .saffron-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-saffron-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-saffron-500 text-slate-900 text-xs sm:text-sm font-semibold py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2 truncate">
+                <span class="bg-navy-900 text-white text-[10px] sm:text-xs uppercase px-2 py-0.5 rounded font-bold animate-pulse">Latest</span>
+                <span class="truncate">Admissions & Eco Club Registration Open for 2026 Academic Year!</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-slate-900 font-medium text-xs">
+                <span><i class="fa-solid fa-phone me-1"></i> Helpline: +91 12345 67890</span>
+                <span><i class="fa-solid fa-envelope me-1"></i> gsss.bkb@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300" id="main-navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full saffron-gradient flex items-center justify-center text-white shadow-md font-extrabold text-xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <a href="#home" class="text-navy-900 font-extrabold text-base sm:text-lg lg:text-xl leading-tight block tracking-tight">
+                            PM SHRI SCHOOL OF EXCELLENCE
+                        </a>
+                        <span class="text-xs text-saffron-600 font-bold uppercase tracking-wider block">BECHAR KA BAGH</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-1 xl:space-x-2 font-medium text-slate-700 text-sm">
+                    <a href="#home" class="px-3 py-2 rounded-lg hover:text-navy-900 hover:bg-slate-100 transition-colors">Home</a>
+                    <a href="#about" class="px-3 py-2 rounded-lg hover:text-navy-900 hover:bg-slate-100 transition-colors">About Us</a>
+                    <a href="#principal" class="px-3 py-2 rounded-lg hover:text-navy-900 hover:bg-slate-100 transition-colors">Leadership</a>
+                    <a href="#faculty" class="px-3 py-2 rounded-lg hover:text-navy-900 hover:bg-slate-100 transition-colors">Faculty & Staff</a>
+                    <a href="#activities" class="px-3 py-2 rounded-lg hover:text-navy-900 hover:bg-slate-100 transition-colors">Activities & News</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg bg-navy-900 text-white hover:bg-navy-800 transition-all shadow-md ml-2">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-700 hover:text-navy-900 focus:outline-none p-2 rounded-md" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 text-slate-700 font-medium">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-slate-100">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-slate-100">About Us</a>
+            <a href="#principal" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-slate-100">Leadership</a>
+            <a href="#faculty" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-slate-100">Faculty & Staff</a>
+            <a href="#activities" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-slate-100">Activities & News</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md bg-navy-900 text-white text-center mt-2">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative gradient-hero text-white py-20 lg:py-28 overflow-hidden">
+        <!-- Background Pattern Decor -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                <path d="M11 18l17 17-17 17-17-17z" fill="#FFF"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-saffron-500/20 border border-saffron-400/40 text-saffron-400 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-award"></i>
+                        <span>PM SHRI School Accreditation</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        PM SHRI SCHOOL OF EXCELLENCE <span class="text-saffron-400 block mt-1">BECHAR KA BAGH</span>
+                    </h1>
+                    <p class="text-slate-300 text-lg sm:text-xl font-light italic">
+                        "Learn, Transform, and Rise!"
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Fostering holistic development, modern digital education, green environmental initiatives, and high standards of academic excellence in Himachal Pradesh.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#activities" class="w-full sm:w-auto px-8 py-3.5 saffron-gradient text-slate-950 font-bold rounded-xl shadow-lg hover:shadow-saffron-500/30 hover:scale-105 transition-all text-center">
+                            <i class="fa-solid fa-compass me-2"></i> Explore Activities
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 hover:scale-105 transition-all text-center backdrop-blur-sm">
+                            <i class="fa-solid fa-paper-plane me-2"></i> Get In Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 group">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="School Campus Building" class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 p-4 glass-card rounded-xl text-slate-900">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h2 class="text-sm font-bold text-navy-900">State-of-the-Art Learning</h2>
+                                    <p class="text-xs text-slate-600">Smart Classrooms, IT Labs & Eco Initiatives</p>
+                                </div>
+                                <span class="w-10 h-10 rounded-full bg-saffron-500 text-navy-900 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Counters Bar -->
+    <section class="bg-navy-900 border-t border-white/10 text-white py-10 shadow-lg relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <i class="fa-solid fa-user-graduate text-3xl text-saffron-400 mb-2"></i>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white counter" data-target="650">0</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1 uppercase tracking-wider font-medium">Students Enrolled</div>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <i class="fa-solid fa-chalkboard-user text-3xl text-saffron-400 mb-2"></i>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white counter" data-target="18">0</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1 uppercase tracking-wider font-medium">Dedicated Faculty</div>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <i class="fa-solid fa-trophy text-3xl text-saffron-400 mb-2"></i>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white counter" data-target="45">0</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1 uppercase tracking-wider font-medium">Sports & NSS Awards</div>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <i class="fa-solid fa-leaf text-3xl text-saffron-400 mb-2"></i>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white counter" data-target="120">0</div>
+                    <div class="text-xs sm:text-sm text-slate-300 mt-1 uppercase tracking-wider font-medium">Eco Club Drives</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-saffron-600 font-bold uppercase text-xs tracking-widest">Discover Our Legacy</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-2">Empowering Minds, Shaping Futures</h2>
+                <div class="w-20 h-1 saffron-gradient mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-saffron-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Green Sen Eco Club</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Active environmental stewardship including tree plantation, role-play awareness, zero-plastic initiatives, and campus sustainability projects.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-saffron-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Vocational & IT Training</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Specialized vocational education in Healthcare and ITeS equips students with practical job-ready skillsets for the digital modern world.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-navy-900 text-saffron-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Community & Character</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        NSS Special Camps, Anti-Drug Drives, and active SMC partnerships build disciplined, social-minded citizens prepared for societal leadership.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal & Leadership Card Section -->
+    <section id="principal" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <!-- Principal Photo Container -->
+                    <div class="lg:col-span-5 bg-navy-900 p-8 sm:p-12 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-saffron-500 overflow-hidden shadow-2xl relative z-10 mb-6">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="SANJEEV KUMAR - School Principal" class="w-full h-full object-cover" />
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white relative z-10">SANJEEV KUMAR</h3>
+                        <p class="text-saffron-400 font-semibold text-sm uppercase tracking-wider mt-1 relative z-10">School Principal</p>
+                        <span class="mt-3 px-4 py-1 rounded-full bg-white/10 text-white text-xs font-medium border border-white/20 relative z-10">PM SHRI Leader</span>
+                    </div>
+
+                    <!-- Quote & Message -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center">
+                        <div class="text-saffron-500 text-4xl mb-4">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mb-4 leading-snug">
+                            "Education is not merely the acquisition of facts, but the training of the mind to think and transform society."
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
+                            At PM SHRI School of Excellence Bechar Ka Bagh, our mission is to create a dynamic environment where traditional values meet contemporary technological innovations. We strive to nurture every student's unique talent through interactive learning, co-curricular exposure, and values-based character development.
+                        </p>
+                        <div class="flex items-center space-x-4 border-t border-slate-100 pt-4">
+                            <div class="text-xs text-slate-500">
+                                <span class="font-bold text-slate-800 block">PM SHRI Academic Vision</span>
+                                Quality Education • Character Building • Digital Skill Excellence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty & Staff Directory Grid Section -->
+    <section id="faculty" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-saffron-600 font-bold uppercase text-xs tracking-widest">Our Educator Network</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-2">Faculty & Staff Directory</h2>
+                <div class="w-20 h-1 saffron-gradient mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-600 text-sm">Meet our dedicated team of administrators, lecturers, vocational trainers, and teaching personnel.</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="mb-8 flex flex-col sm:flex-row gap-4 justify-between items-center bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                <div class="relative w-full sm:w-80">
+                    <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="faculty-search" placeholder="Search teacher by name or subject..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm" />
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto justify-start sm:justify-end" id="faculty-filters">
+                    <button class="filter-btn active-filter px-4 py-2 rounded-xl text-xs font-semibold bg-navy-900 text-white transition-all" data-filter="all">All Staff</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all" data-filter="Lecturer">Lecturers</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all" data-filter="TGT">TGT Teachers</button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all" data-filter="Vocational">Vocational / IT</button>
+                </div>
+            </div>
+
+            <!-- Faculty Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="faculty-grid">
+                <!-- Dynamically Populated by JS -->
+            </div>
+            
+            <div id="no-faculty-found" class="hidden text-center py-12 text-slate-500">
+                <i class="fa-solid fa-user-slash text-4xl mb-3"></i>
+                <p>No faculty member matched your search query.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activities & News Feed Section -->
+    <section id="activities" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-saffron-600 font-bold uppercase text-xs tracking-widest">School Highlights & Updates</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-2">Recent Activities & Events</h2>
+                <div class="w-20 h-1 saffron-gradient mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-600 text-sm">Stay up to date with events, community camps, and achievements inspired by our school blog.</p>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="events-grid">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Feedback Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-saffron-600 font-bold uppercase text-xs tracking-widest">Reach Out To Us</span>
+                    <h2 class="text-3xl font-extrabold text-navy-900">We'd Love To Hear From You</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Have questions regarding admissions, school events, or curriculum? Contact the school administration or visit our campus.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-saffron-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-sm">School Address</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">PM SHRI School of Excellence Bechar Ka Bagh, District Sirmaur, Himachal Pradesh, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-saffron-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-sm">Email Inquiry</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">gsss.bkb@gmail.com / info@gsssbkb.edu.in</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-saffron-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-sm">Office Working Hours</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Monday - Saturday: 09:00 AM - 04:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-md">
+                    <h3 class="text-xl font-bold text-navy-900 mb-6">Send Us a Direct Message</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Full Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm" placeholder="e.g. Rahul Sharma">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email Address *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm" placeholder="e.g. rahul@example.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm" placeholder="+91 98765 43210">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Subject</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm">
+                                    <option>General Inquiry</option>
+                                    <option>Admissions 2026</option>
+                                    <option>Eco Club / NSS Information</option>
+                                    <option>Feedback & Suggestions</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Message *</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-navy-900 text-sm" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-navy-900 hover:bg-navy-800 text-white font-bold rounded-xl shadow-md transition-all">
+                            <i class="fa-solid fa-paper-plane me-2"></i> Submit Message
+                        </button>
+                    </form>
+
+                    <div id="contact-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-800 text-sm font-medium flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-check text-xl"></i>
+                        <span>Thank you! Your message has been recorded successfully. Our team will contact you shortly.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full saffron-gradient flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <span class="font-extrabold text-lg text-white">PM SHRI SCHOOL OF EXCELLENCE</span>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-md">
+                        BECHAR KA BAGH — Committed to fostering academic growth, green environment projects, and skill-oriented technical education for every student.
+                    </p>
+                    <div class="flex space-x-3 text-slate-400">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-saffron-500 hover:text-navy-900 flex items-center justify-center transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-saffron-500 hover:text-navy-900 flex items-center justify-center transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-saffron-500 hover:text-navy-900 flex items-center justify-center transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-saffron-400 font-bold text-sm uppercase mb-4 tracking-wider">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#home" class="hover:text-saffron-400 transition-colors">Home Page</a></li>
+                        <li><a href="#about" class="hover:text-saffron-400 transition-colors">About Our School</a></li>
+                        <li><a href="#principal" class="hover:text-saffron-400 transition-colors">Leadership Message</a></li>
+                        <li><a href="#faculty" class="hover:text-saffron-400 transition-colors">Faculty Directory</a></li>
+                        <li><a href="#activities" class="hover:text-saffron-400 transition-colors">Activities & Events</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-saffron-400 font-bold text-sm uppercase mb-4 tracking-wider">Key Programs</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-check text-saffron-400 me-2"></i>Green Sen Eco Club</li>
+                        <li><i class="fa-solid fa-check text-saffron-400 me-2"></i>NSS 7-Day Special Camp</li>
+                        <li><i class="fa-solid fa-check text-saffron-400 me-2"></i>Vocational ITeS & Healthcare</li>
+                        <li><i class="fa-solid fa-check text-saffron-400 me-2"></i>Anti-Drug Awareness</li>
+                        <li><i class="fa-solid fa-check text-saffron-400 me-2"></i>SMC Executive Body</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 space-y-4 md:space-y-0">
+                <p>&copy; 2026 PM SHRI SCHOOL OF EXCELLENCE BECHAR KA BAGH. All rights reserved.</p>
+                <div class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-saffron-400 font-semibold text-center">
+                    Website Designed & Maintained by — <span class="text-white">DS THAKUR</span> (Vocational Trainer – ITeS)
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Event Detail View -->
+    <div id="event-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Dynamically filled JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top floating button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 saffron-gradient text-navy-900 font-bold rounded-full shadow-2xl hidden flex items-center justify-center text-lg z-40 transition-all hover:scale-110">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Interactive JavaScript Implementation -->
+    <script>
+        // Faculty Directory Data Roster
+        const facultyData = [
+            { name: "Sanjeev Kumar", title: "Principal", dept: "Administration", category: "Lecturer", avatar: "SK", icon: "fa-user-tie" },
+            { name: "Om Prakash Pundir", title: "Lecturer English", dept: "Languages", category: "Lecturer", avatar: "OP", icon: "fa-book" },
+            { name: "Surender Mohan", title: "Lecturer Hindi", dept: "Languages", category: "Lecturer", avatar: "SM", icon: "fa-language" },
+            { name: "Shivam Pundir", title: "Lecturer History", dept: "Humanities", category: "Lecturer", avatar: "SP", icon: "fa-landmark" },
+            { name: "Naresh Kumar", title: "Lecturer Economics", dept: "Humanities", category: "Lecturer", avatar: "NK", icon: "fa-chart-line" },
+            { name: "Mamta Devi", title: "Lecturer Pol. Sci.", dept: "Humanities", category: "Lecturer", avatar: "MD", icon: "fa-scale-balanced" },
+            { name: "Naresh Chauhan", title: "TGT-Arts", dept: "Arts & Culture", category: "TGT", avatar: "NC", icon: "fa-palette" },
+            { name: "Chander Mohan", title: "PET", dept: "Physical Education", category: "TGT", avatar: "CM", icon: "fa-volleyball" },
+            { name: "Jai Prakash", title: "TGT Hindi", dept: "Languages", category: "TGT", avatar: "JP", icon: "fa-book-open" },
+            { name: "Randeep Singh", title: "TGT-Arts", dept: "Arts & Culture", category: "TGT", avatar: "RS", icon: "fa-brush" },
+            { name: "Deepak Kumar", title: "TGT-Skt", dept: "Sanskrit Language", category: "TGT", avatar: "DK", icon: "fa-scroll" },
+            { name: "Sunita Kumari", title: "TGT", dept: "General Education", category: "TGT", avatar: "SK", icon: "fa-chalkboard-user" },
+            { name: "Rakesh Kumar", title: "DM", dept: "Drawing Master", category: "TGT", avatar: "RK", icon: "fa-pencil" },
+            { name: "Poonam", title: "TGT-NM", dept: "Non-Medical Science", category: "TGT", avatar: "PN", icon: "fa-flask" },
+            { name: "Rukmani Sharma", title: "IT Faculty", dept: "Information Tech", category: "Vocational", avatar: "RS", icon: "fa-desktop" },
+            { name: "Shweta Pundir", title: "VT-Healthcare", dept: "Vocational Studies", category: "Vocational", avatar: "SP", icon: "fa-heart-pulse" },
+            { name: "Dharam Singh", title: "VT-ITeS", dept: "Vocational Studies", category: "Vocational", avatar: "DS", icon: "fa-network-wired" },
+            { name: "Harish Sharma", title: "Superintendent", dept: "Administration", category: "Lecturer", avatar: "HS", icon: "fa-folder-tree" }
+        ];
+
+        // Recent Activities Data Feed
+        const eventsData = [
+            {
+                id: 1,
+                title: "Independence Day Celebration (स्वतंत्रता दिवस)",
+                date: "August 15",
+                badge: "National Event",
+                image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=600&q=80",
+                summary: "Patriotic parade, flag hoisting ceremony, cultural dances, and speeches commemorating National Independence Day with full pride.",
+                details: "The school campus vibrated with nationalist fervor during the Independence Day celebrations. Principal Sanjeev Kumar unfurled the National Flag followed by the National Anthem. Students performed patriotic songs, traditional dances, and drama performances highlighting national unity and heritage."
+            },
+            {
+                id: 2,
+                title: "NSS Special Camp (7-Day Camp)",
+                date: "Recent Camp",
+                badge: "Community Service",
+                image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=80",
+                summary: "7-day intensive National Service Scheme camp focusing on community service, health awareness, and village cleanliness drives.",
+                details: "Our NSS unit successfully organized a 7-day residential camp. Volunteers engaged in village cleanliness drives, tree plantations, literacy drives, and adult health awareness programs in surrounding areas of Bechar Ka Bagh, embodying 'Not Me But You'."
+            },
+            {
+                id: 3,
+                title: "Green Sen Eco Club Role Play & Plantation",
+                date: "Environmental Drive",
+                badge: "Eco Club",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+                summary: "Creative role play performed by Eco Club members to spread awareness on single-use plastic ban and forest conservation.",
+                details: "Members of the Green Sen Eco Club demonstrated creative talent through street plays and role-play acts on plastic pollution. Students also planted over 100 saplings in the school surroundings to enhance green cover and biodiversity."
+            },
+            {
+                id: 4,
+                title: "Anti-Drug Awareness Campaign (अंतरराष्ट्रीय नशा निषेध दिवस)",
+                date: "June 26",
+                badge: "Social Awareness",
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+                summary: "Sensitization rally and mass anti-drug pledge taken by staff and students on International Day Against Drug Abuse.",
+                details: "To combat substance abuse and educate youth, PM SHRI School Bechar Ka Bagh organized a high-impact awareness rally. Students carried posters and chanted slogans, concluding with a solemn anti-drug pledge administered by the principal."
+            },
+            {
+                id: 5,
+                title: "SMC Executive Committee Formation",
+                date: "School Governance",
+                badge: "SMC Body",
+                image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
+                summary: "Ramesh Chand unanimously elected as President of the School Management Committee alongside parent representatives.",
+                details: "The general body meeting of parents and teachers convened to form the new SMC Executive Committee. Mr. Ramesh Chand was elected as President. The committee resolved to actively support academic infrastructural upgrades under the PM SHRI scheme."
+            }
+        ];
+
+        // Populate Faculty Cards
+        function renderFaculty(list) {
+            const grid = document.getElementById('faculty-grid');
+            const noFound = document.getElementById('no-faculty-found');
+            grid.innerHTML = '';
+
+            if(list.length === 0) {
+                noFound.classList.remove('hidden');
+                return;
+            } else {
+                noFound.classList.add('hidden');
+            }
+
+            list.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-50 border border-slate-200 rounded-2xl p-5 hover:shadow-lg transition-all flex flex-col justify-between group hover:-translate-y-1";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-saffron-400 font-bold flex items-center justify-center text-lg shadow-sm group-hover:bg-saffron-500 group-hover:text-navy-900 transition-colors">
+                                ${item.avatar}
+                            </div>
+                            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-slate-200 text-slate-700">
+                                ${item.category}
+                            </span>
+                        </div>
+                        <h4 class="font-extrabold text-navy-900 text-base leading-snug">${item.name}</h4>
+                        <p class="text-saffron-600 font-semibold text-xs mt-1"><i class="fa-solid ${item.icon} me-1"></i> ${item.title}</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 flex items-center justify-between">
+                        <span><i class="fa-solid fa-building-columns me-1"></i> ${item.dept}</span>
+                        <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Populate Events Cards
+        function renderEvents() {
+            const grid = document.getElementById('events-grid');
+            grid.innerHTML = '';
+
+            eventsData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <span class="absolute top-3 left-3 bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                                ${item.badge}
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-saffron-600 font-semibold"><i class="fa-regular fa-calendar me-1"></i> ${item.date}</span>
+                            <h3 class="font-extrabold text-navy-900 text-lg mt-1 mb-2 leading-snug">${item.title}</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">${item.summary}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal(${item.id})" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 font-bold text-xs transition-all flex items-center justify-center space-x-1">
+                            <span>Read Full Story</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter & Search Logic
+        let activeCategory = 'all';
+        const searchInput = document.getElementById('faculty-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        function filterFaculty() {
+            const query = searchInput.value.toLowerCase().trim();
+            const filtered = facultyData.filter(item => {
+                const matchesCategory = (activeCategory === 'all') || (item.category === activeCategory);
+                const matchesQuery = item.name.toLowerCase().includes(query) || item.title.toLowerCase().includes(query) || item.dept.toLowerCase().includes(query);
+                return matchesCategory && matchesQuery;
+            });
+            renderFaculty(filtered);
+        }
+
+        searchInput.addEventListener('input', filterFaculty);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-navy-900', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-700');
+                });
+                btn.classList.remove('bg-white', 'text-slate-700');
+                btn.classList.add('bg-navy-900', 'text-white');
+                activeCategory = btn.getAttribute('data-filter');
+                filterFaculty();
+            });
+        });
+
+        // Event Modal Controls
+        function openModal(id) {
+            const item = eventsData.find(e => e.id === id);
+            if(!item) return;
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <span class="inline-block bg-saffron-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full mb-2">${item.badge}</span>
+                <h3 class="text-2xl font-extrabold text-navy-900 mb-2">${item.title}</h3>
+                <p class="text-xs text-slate-500 mb-4"><i class="fa-regular fa-calendar me-1"></i> ${item.date}</p>
+                <img src="${item.image}" alt="${item.title}" class="w-full h-56 object-cover rounded-2xl mb-4 shadow" />
+                <p class="text-slate-700 text-sm leading-relaxed">${item.details}</p>
+            `;
+            document.getElementById('event-modal').classList.remove('hidden');
+        }
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('event-modal').classList.add('hidden');
+        });
+
+        // Contact Form Handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contact-success').classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('contact-success').classList.add('hidden');
+            }, 6000);
+        });
+
+        // Dynamic Counters Animation
+        function startCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 50;
+                const updateCount = () => {
+                    count += speed;
+                    if(count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Back to top button logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 400) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Window Init
+        window.onload = function() {
+            renderFaculty(facultyData);
+            renderEvents();
+            startCounters();
+        };
+    </script>
+</body>
+</html>
